@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edukasi & Artikel Kesehatan - Bidan Yusra & Safira</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="logo.png" />
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* ── STYLING KHUSUS HALAMAN ARTIKEL ── */
+    .article-hero {
+      padding: 140px 24px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--teal-bg) 0%, #fff 100%);
+    }
+    
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+    
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--teal);
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      transition: color 0.2s;
+    }
+    
+    .back-to-home:hover {
+      color: var(--teal-lt);
+    }
+    
+    .article-box {
+      background: #ffffff;
+      border: 1px solid #eaf4f3;
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 16px rgba(26, 140, 122, 0.03);
+    }
+    
+    .article-meta {
+      font-size: 0.85rem;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 16px;
+    }
+    
+    .article-box h2 {
+      font-family: "Lora", serif;
+      color: var(--dark);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    
+    /* Container Foto Artikel agar Proporsional */
+    .article-image-wrapper {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+    
+    .article-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mencegah gambar gepeng atau melar */
+      object-position: center;
+      display: block;
+    }
+    
+    .article-content p {
+      color: var(--mid);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    
+    .article-content ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+    
+    .article-content li {
+      margin-bottom: 8px;
+    }
+    
+    /* Responsive Breakpoints untuk HP */
+    @media (max-width: 768px) {
+      .article-hero {
+        padding: 110px 24px 40px;
+      }
+      .article-box {
+        padding: 24px 20px;
+      }
+      .article-box h2 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+      }
+      .article-image-wrapper {
+        height: 220px; /* Tinggi gambar otomatis mengecil di HP */
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-img-wrapper">
+        <img src="logo.png" alt="Logo" class="nav-logo-img">
+      </div>
+      <div class="nav-logo-text">
+        Bidan Yusra & Safira
+        <span>Mom SPA & Baby Care</span>
+      </div>
+    </a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">Beranda</a></li>
+      <li><a href="index.html#services">Layanan</a></li>
+      <li><a href="index.html#coverage">Area & Jadwal</a></li>
+      <li><a href="index.html#reviews">Ulasan</a></li>
+      <li><a href="index.html#profil-bidan">Profil</a></li>
+      <li><a href="artikel.html" style="color: var(--teal); font-weight: 800;">Artikel</a></li>
+    </ul>
+
+    <button class="nav-cta" onclick="openWA()">
+      <img src="logowhatsapp.jpg" alt="WA" class="cta-icon-img">
+      Reservasi
+    </button>
+
+    <button class="hamburger" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <header class="article-hero">
+    <div class="container">
+      <span class="section-eyebrow">Ruang Edukasi</span>
+      <h1 class="section-title" style="font-size: 2.8rem;">Artikel & Tips Kesehatan</h1>
+      <p class="section-sub" style="margin: 0 auto;">Informasi terpercaya seputar tumbuh kembang anak, kesehatan ibu, dan keharmonisan keluarga langsung dari praktisi kebidanan.</p>
+      <div class="divider" style="margin: 24px auto 0;"></div>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <a href="index.html" class="back-to-home">← Kembali ke Beranda</a>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>1. Apa Itu Mom & Baby Spa? Mengenal Manfaatnya untuk Tumbuh Kembang</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="perawatanbayi.png" alt="Layanan Mom & Baby Spa" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p><strong>Mom & Baby Spa</strong> bukan sekadar tren gaya hidup modern, melainkan sebuah metode perawatan holistik yang menggabungkan terapi air (hydrotherapy) dan pijat stimulasi. Layanan ini dirancang khusus untuk mendukung masa transisi ibu pasca melahirkan sekaligus merangsang perkembangan optimal pada bayi.</p>
+        <p>Bagi bayi, sesi <em>Baby Swim</em> membantu melatih motorik kasar, memperkuat otot dan tulang, serta meningkatkan kualitas tidur. Sementara bagi sang Ibu, perawatan post-natal spa bermanfaat untuk melancarkan sirkulasi darah, meredakan depresi pasca-melahirkan (baby blues), dan mengoptimalkan produksi ASI melalui pijat laktasi yang rileks.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      </div>
+      <h2>2. Menjaga Kesehatan Ibu dan Anak di 1000 Hari Pertama Kehidupan</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="ibuanak.png" alt="Kesehatan Ibu dan Anak" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Periode 1000 Hari Pertama Kehidupan (HPK)—dimulai sejak awal kehamilan hingga anak berusia dua tahun—adalah masa emas (golden period) yang menentukan masa depan kesehatan anak. Kerusakan atau kekurangan nutrisi pada masa ini bersifat permanen dan tidak dapat diperbaiki di masa mendatang.</p>
+        <p>Untuk memastikan kesehatan ibu dan anak tetap prima, pastikan beberapa poin mendasar berikut terpenuhi:</p>
+        <ul>
+          <li>Pemenuhan gizi seimbang selama masa kehamilan (zat besi, asam folat, dan kalsium).</li>
+          <li>Inisiasi Menyusui Dini (IMD) dan pemberian ASI Eksklusif selama 6 bulan pertama.</li>
+          <li>Pemantauan berkala grafik tumbuh kembang anak serta pemberian imunisasi dasar lengkap.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>3. Mewujudkan Kesehatan Ibu dan Keluarga yang Harmonis</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="ibu.png" alt="Kesehatan Ibu dan Keluarga" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Kesehatan seorang ibu adalah pondasi utama dari kesehatan seluruh anggota keluarga. Ketika seorang ibu sehat secara fisik dan psikologis, manajemen rumah tangga, pola asuh anak, hingga suasana psikis di dalam rumah akan berjalan dengan harmonis.</p>
+        <p>Kesehatan keluarga yang optimal dapat dicapai melalui penerapan pola hidup bersih dan sehat (PHBS) di lingkungan rumah, komunikasi terbuka antar pasangan untuk membagi beban emosional pasca melahirkan, serta kesadaran untuk melakukan pemeriksaan kesehatan reproduksi secara berkala.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>4. Pola Hidup Sehat</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="pola hidup sehat.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Pola hidup sehat adalah kebiasaan yang dilakukan secara konsisten untuk menjaga kesehatan tubuh dan meningkatkan kualitas hidup. Kebiasaan ini dapat dimulai dengan mengonsumsi makanan bergizi seimbang, memperbanyak sayur dan buah, minum air putih yang cukup, serta mengurangi konsumsi makanan tinggi gula, garam, dan lemak. Dengan asupan nutrisi yang baik, tubuh akan memiliki energi yang cukup untuk menjalani aktivitas sehari-hari dan lebih mampu melawan berbagai penyakit.</p>
+        <p>Selain menjaga pola makan, pola hidup sehat juga mencakup olahraga secara rutin, istirahat yang cukup, dan pengelolaan stres yang baik. Aktivitas fisik membantu menjaga kebugaran tubuh, sementara tidur yang berkualitas mendukung proses pemulihan dan regenerasi sel. Dengan menerapkan kebiasaan sehat secara berkelanjutan, tubuh akan menjadi lebih kuat, pikiran lebih segar, dan kualitas hidup pun meningkat secara keseluruhan.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>5. Kesehatan Ibu dan Anak</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="kesehatanibudananak.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Kesehatan ibu dan anak merupakan salah satu aspek penting dalam menciptakan keluarga yang sehat dan sejahtera. Perhatian terhadap kesehatan ibu sejak masa kehamilan, persalinan, hingga masa menyusui sangat berpengaruh terhadap tumbuh kembang anak. Pemeriksaan kesehatan secara rutin, pemenuhan gizi yang cukup, serta pola hidup sehat dapat membantu menjaga kondisi ibu dan mendukung perkembangan janin maupun anak secara optimal.</p>
+        <p>Selain itu, kesehatan anak perlu dijaga melalui pemberian nutrisi seimbang, imunisasi lengkap, serta pemantauan pertumbuhan secara berkala. Dukungan keluarga dan akses terhadap layanan kesehatan yang baik juga berperan penting dalam memastikan ibu dan anak mendapatkan perawatan yang dibutuhkan. Dengan menjaga kesehatan ibu dan anak sejak dini, kualitas hidup keluarga dapat meningkat dan generasi yang sehat serta berkualitas dapat terwujud.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>6. Penyebab dan dampak stanting</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="penyebabdandampakstanting.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Stunting adalah kondisi gagal tumbuh pada anak yang disebabkan oleh kekurangan gizi kronis dalam waktu yang lama, terutama sejak masa kehamilan hingga usia dua tahun. Kondisi ini dapat dipengaruhi oleh berbagai faktor, seperti kurangnya asupan nutrisi pada ibu hamil dan anak, pemberian ASI dan makanan pendamping yang tidak optimal, infeksi berulang, sanitasi yang buruk, serta keterbatasan akses terhadap layanan kesehatan. Kurangnya pengetahuan mengenai pola asuh dan gizi yang tepat juga menjadi salah satu faktor yang meningkatkan risiko terjadinya stunting.</p>
+        <p>Dampak stunting tidak hanya terlihat dari pertumbuhan fisik anak yang lebih pendek dibandingkan usianya, tetapi juga dapat memengaruhi perkembangan otak, kemampuan belajar, dan kesehatan secara keseluruhan. Anak yang mengalami stunting cenderung memiliki daya tahan tubuh yang lebih rendah sehingga lebih mudah terserang penyakit. Dalam jangka panjang, stunting dapat menurunkan produktivitas dan kualitas hidup saat dewasa. Oleh karena itu, pencegahan stunting perlu dilakukan sejak dini melalui pemenuhan gizi yang baik, pemeriksaan kesehatan rutin, imunisasi lengkap, serta penerapan pola hidup bersih dan sehat dalam keluarga.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>7. Infeksi Saluran Pernafasan(ISPA)</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="ISPA.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Infeksi Saluran Pernapasan Akut (ISPA) adalah penyakit yang menyerang saluran pernapasan, mulai dari hidung, tenggorokan, hingga paru-paru. Penyakit ini umumnya disebabkan oleh infeksi virus atau bakteri dan dapat menular melalui percikan air liur saat seseorang batuk atau bersin. ISPA merupakan salah satu penyakit yang sering terjadi pada anak-anak karena sistem kekebalan tubuh mereka masih dalam tahap perkembangan. Gejala yang umum muncul antara lain batuk, pilek, demam, sakit tenggorokan, hidung tersumbat, sesak napas, serta tubuh terasa lemas.</p>
+        <p>Pencegahan ISPA dapat dilakukan dengan menerapkan pola hidup bersih dan sehat, seperti mencuci tangan secara rutin menggunakan sabun, menggunakan masker saat sakit atau berada di lingkungan berisiko, menjaga kebersihan rumah dan sirkulasi udara, serta mengonsumsi makanan bergizi untuk meningkatkan daya tahan tubuh. Selain itu, penting untuk memastikan anak mendapatkan istirahat yang cukup dan segera memeriksakan diri ke fasilitas kesehatan apabila gejala semakin berat atau tidak kunjung membaik. Dengan pencegahan dan penanganan yang tepat, risiko komplikasi akibat ISPA dapat diminimalkan sehingga kesehatan saluran pernapasan tetap terjaga.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>8. Pentingnya Imunisasi Anak</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="imunisasi.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Imunisasi merupakan salah satu upaya paling efektif untuk melindungi anak dari berbagai penyakit menular yang berbahaya. Melalui imunisasi, tubuh anak akan membentuk kekebalan terhadap penyakit tertentu sehingga risiko terkena infeksi, komplikasi serius, hingga kematian dapat diminimalkan. Imunisasi tidak hanya melindungi kesehatan individu, tetapi juga membantu mencegah penyebaran penyakit di lingkungan sekitar melalui terbentuknya kekebalan kelompok atau herd immunity. Oleh karena itu, pemberian imunisasi sesuai jadwal yang dianjurkan sangat penting untuk mendukung tumbuh kembang anak yang sehat.</p>
+        <p>Selain memberikan perlindungan jangka panjang, imunisasi juga membantu mengurangi beban kesehatan keluarga dan masyarakat. Anak yang mendapatkan imunisasi lengkap cenderung memiliki risiko lebih rendah mengalami penyakit yang dapat mengganggu pertumbuhan, aktivitas belajar, dan kualitas hidupnya. Orang tua perlu memastikan bahwa anak memperoleh imunisasi dasar maupun lanjutan sesuai rekomendasi tenaga kesehatan. Dengan imunisasi yang lengkap dan tepat waktu, anak dapat tumbuh lebih sehat, aktif, dan terlindungi dari berbagai penyakit yang dapat dicegah melalui vaksinasi.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>9. Kesehatan Mental Anak</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="mentalanak.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>Kesehatan mental anak merupakan kondisi yang berkaitan dengan kesejahteraan emosional, psikologis, dan sosial yang memengaruhi cara anak berpikir, merasakan, dan berinteraksi dengan lingkungan sekitarnya. Kesehatan mental yang baik membantu anak tumbuh menjadi pribadi yang percaya diri, mampu mengelola emosi, menjalin hubungan yang positif, serta menghadapi berbagai tantangan dalam kehidupan sehari-hari. Dukungan dari keluarga, lingkungan sekolah, dan teman sebaya memiliki peran penting dalam membentuk kesehatan mental anak sejak usia dini.</p>
+        <p>Menjaga kesehatan mental anak dapat dilakukan dengan memberikan kasih sayang, perhatian, komunikasi yang terbuka, serta menciptakan lingkungan yang aman dan nyaman. Orang tua juga perlu memberikan kesempatan bagi anak untuk bermain, belajar, beristirahat, dan mengekspresikan perasaannya dengan bebas. Apabila anak menunjukkan perubahan perilaku yang signifikan, seperti mudah marah, menarik diri dari lingkungan, atau kehilangan minat pada aktivitas yang disukai, penting untuk memberikan pendampingan dan berkonsultasi dengan tenaga profesional. Dengan kesehatan mental yang terjaga, anak dapat tumbuh dan berkembang secara optimal baik secara emosional, sosial, maupun akademis.</p>
+      </div>
+    </article>
+
+    <article class="article-box animate-box">
+      <div class="article-meta">
+      </div>
+      <h2>10. Pentingnya ASI Eksklusif</h2>
+      
+      <div class="article-image-wrapper">
+        <img src="asi.png" alt="foto" class="article-image">
+      </div>
+
+      <div class="article-content">
+        <p>ASI eksklusif adalah pemberian Air Susu Ibu (ASI) saja kepada bayi sejak lahir hingga usia enam bulan tanpa tambahan makanan atau minuman lain, kecuali obat dan vitamin sesuai anjuran tenaga kesehatan. ASI mengandung nutrisi lengkap yang dibutuhkan bayi untuk tumbuh dan berkembang secara optimal, termasuk protein, lemak, vitamin, mineral, serta antibodi alami yang membantu melindungi bayi dari berbagai penyakit. Selain mudah dicerna, ASI juga berperan penting dalam mendukung perkembangan otak, memperkuat sistem kekebalan tubuh, dan menjaga kesehatan pencernaan bayi.</p>
+        <p>Pemberian ASI eksklusif tidak hanya memberikan manfaat bagi bayi, tetapi juga bagi ibu. Menyusui dapat mempererat ikatan emosional antara ibu dan anak, membantu proses pemulihan setelah melahirkan, serta menurunkan risiko beberapa penyakit pada ibu. Selain itu, ASI merupakan sumber nutrisi yang higienis, praktis, dan selalu tersedia kapan saja dibutuhkan. Oleh karena itu, pemberian ASI eksklusif selama enam bulan pertama kehidupan sangat dianjurkan untuk mendukung pertumbuhan anak yang sehat, kuat, dan cerdas.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 <strong>Bidan Yusra & Safira</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
